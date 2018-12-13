@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+<i class='fas fa-angle-double-down'></i>
+<table id="tblStatements" class="table">
+  <thead>
+    <tr>
+      <th>Period Starting</th>
+      <th>Period Ending</th>
+      <th>Download</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id='period-start'><input type="text name ="" id="name" value="fgg"></td>
+      <td id='period-end'>5/31/2013</td>
+      <td>
+        <button type='submit'>Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td id='period-start'><input type="text name ="" id="name" value="fggtgfsg"></td>
+      <td id='period-end'>4/30/2013</td>
+      <td>
+        <button type='submit'>Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td id='period-start'><input type="text name ="" id="name" value="fgg"></td>
+      <td id='period-end'>3/31/2013</td>
+      <td>
+        <button type='submit'>Download</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script src="jquery.min.js"></script>
+
+<script>
+	$('button').click(function() {
+  // Get the first td
+  var periodStart = $(this).closest('tr').children('td:eq(0)').children("#name").val();
+
+  // Get the second td
+  var periodEnd = $(this).closest('tr').children('td:eq(1)').text();
+
+  alert('periodStart:  ' + periodStart + '\nperiodEnd:  ' + periodEnd)
+});
+
+</script>
+</body>
+</html>
